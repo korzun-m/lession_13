@@ -12,7 +12,6 @@
     keypair: lession13
     subnetid:  subnet-2303f85e
     group: sg1
-    iam_profile_name: s3
 
   tasks:
 
@@ -35,7 +34,6 @@
 
     - name: Create instance
       ec2:
-        instance_profile_name: "{{ iam_profile_name }}"
         key_name: "{{ keypair }}"
         region: "{{ region }}"
         group: "{{ group }}"
